@@ -6,12 +6,92 @@ body {
   @apply bg-[#080808];
 }
 
+.navbarContent {
+  @apply flex w-full max-w-screen-xl;
+}
+
+.navLinkDiv {
+  @apply justify-between hidden w-full lg:flex md:w-auto relative ml-[40px] gap-2 items-center transition-opacity duration-1000 ease-in-out;
+}
+
+.navLinkContainer {
+  @apply flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 text-[16px] font-normal tracking-[0.117px] h-full items-center text-[#ffffffb3] cursor-pointer transition ease-in-out duration-[50ms] justify-center relative px-[6px];
+}
+
+.navLink {
+  @apply block py-2 px-3 text-[#ffffffb3] opacity-80 rounded md:hover:bg-transparent md:hover:text-white hover:opacity-90 md:p-0;
+}
+
 .searchContainer {
-  @apply  hidden lg:flex rounded-full border border-white-05 bg-white-07 h-[42.5px] px-4 py-[10px] items-center flex-1 gap-2 relative
+  @apply hidden lg:flex rounded-full border border-white-05 bg-white-07 h-[42.5px] px-4 py-[10px] items-center flex-1 gap-2 relative;
 }
 
 .searchInput {
-  @apply flex-1 text-white text-sm  font-normal leading-5  border-none w-full bg-transparent tracking-wide
+  @apply flex-1 text-white text-sm font-normal leading-5 border-none w-full bg-transparent tracking-wide;
+}
+
+.mobileSearchIcon {
+  @apply w-[42.5px] h-[42.5px] backdrop-blur-[12px] flex lg:hidden items-center justify-center rounded-full relative cursor-pointer border border-white-05 bg-white-07;
+}
+
+.broadcastDiv {
+  @apply w-[42.5px] h-[42.5px] backdrop-blur-[12px] flex items-center justify-center border border-[#fa8922] rounded-full relative cursor-pointer;
+}
+
+/* sections */
+
+.narrativeBody {
+  @apply p-[24px] border-t border-white-10 flex flex-col gap-[8px] bg-[#101010] max-h-[350px] overflow-y-auto left-0 top-full absolute rounded-bl-[24px] rounded-br-[24px] w-full;
+}
+
+.narrativeBodyImageDiv {
+  @apply p-6 flex flex-col md:flex-row items-center gap-[24px] cursor-pointer rounded-t-3xl border border-white-15 border-b-0;
+}
+
+.narrativeBodyMainImage {
+  @apply flex-none h-[180px] w-[160px] p-[8px] rounded-[16px] border border-white-20 bg-white-05 relative;
+}
+
+.narrativeGuests {
+  @apply absolute left-[14%] bottom-[16px] bg-black-40 backdrop-blur-[10px] px-[24px] py-2 inline-block rounded-full border border-white-20;
+}
+
+.narrativeHeadTitle {
+  @apply text-[24px] font-normal leading-[30px] mb-[8px];
+}
+
+.narrativeHeadSubtitle {
+  @apply text-[16px] font-normal leading-[20px] mb-[16px] overflow-hidden overflow-ellipsis line-clamp-[2] text-white-40;
+}
+
+.rewardCheckIcon {
+  @apply flex w-[48px] h-[48px] p-[12px] justify-center items-center rounded-full border border-white-20 bg-white-05 backdrop-blur-[10px] text-[#fff3] text-[28px] ml-[55px];
+}
+
+.rewardImageDiv {
+  @apply w-[160px] h-[180px] rounded-[24px] border border-white-20 bg-white-05 backdrop-blur-[10px] flex justify-center items-center mr-[120px] mt-[16px] overflow-hidden;
+}
+
+.coinImgDiv {
+  @apply px-3 py-2 w-max flex flex-row gap-2 h-[32px] items-center rounded-[1000px] border-[0.5px] border-white-05 bg-white-07 text-[14px] font-normal leading-[16px];
+}
+
+.lockIcon {
+  @apply flex w-[48px] h-[48px] p-[12px] justify-center items-center rounded-full border border-white-20 bg-[#131313] backdrop-blur-[10px] absolute bottom-0 right-0 translate-x-[34%] translate-y-[35%];
+}
+
+.claimBtn {
+  @apply flex w-[160px] py-[10px] justify-center items-center rounded-[8px] border border-white-05 bg-white-05 text-white-40 text-[16px] font-normal leading-[20px] cursor-not-allowed;
+}
+
+/*  reward */
+
+.timerContainer {
+  @apply p-3 flex items-center justify-between gap-5 overflow-hidden relative rounded-lg border border-white border-opacity-10 bg-black bg-opacity-20 shadow-inner;
+}
+
+.timerBox {
+  @apply flex flex-col items-center z-10 relative max-w-10 min-w-10;
 }
 
 .timerNumber {
@@ -21,10 +101,22 @@ body {
 .timerInterval {
   @apply text-white-20 text-center text-base font-normal leading-5 tracking-tight;
 }
-/* 
-.text-shadow {
-    @apply drop-shadow-[0px_0px_2px_rgba(0, 0, 0, 0.4)]
-} */
+
+.luckyDrawDiv {
+  @apply text-white-80 text-base font-normal leading-5 absolute top-6 right-6 px-1 py-0.5 rounded-[4px];
+}
+
+.rewardStepTitle {
+  @apply text-white-40 text-sm font-normal leading-4 flex items-center justify-between mt-3;
+}
+
+.rewardCheck {
+  @apply flex w-4 h-4 p-1 justify-center items-center flex-shrink-0 rounded-full border border-white-10 bg-white-05 backdrop-blur-[10px] self-end text-sm;
+}
+
+.rewardClaimBtn {
+  @apply flex w-full py-[10px] justify-center items-center gap-2 rounded-lg border border-white-07 bg-white-07 text-white-60 text-center text-base font-normal leading-5 mt-3;
+}
 
 .socialLink {
   @apply bg-[#1a1a1a] opacity-100 rounded-lg mx-2 p-2 text-[1.25rem] cursor-pointer;
@@ -51,7 +143,7 @@ body {
 }
 
 .cardTitle {
-  @apply text-[#fff9]  text-[24px] font-normal leading-[30px] tracking-[.117px] absolute bottom-[12px] left-[15px] mix-blend-plus-lighter overflow-hidden text-ellipsis line-clamp-3 z-[2];
+  @apply text-[#fff9] text-[24px] font-normal leading-[30px] tracking-[.117px] absolute bottom-[12px] left-[15px] mix-blend-plus-lighter overflow-hidden text-ellipsis line-clamp-3 z-[2];
 }
 
 .rewardPath {
@@ -60,12 +152,11 @@ body {
 
 .rewardDetailContainer {
   @apply w-full mt-5 relative transform-none top-0 right-0 rounded border border-opacity-20 border-white bg-[#131313];
-
-  @apply lg:w-[312px] lg:rounded-[6px] lg:border-[0.5px]  lg:border-opacity-20  lg:shadow-[0_2px_5px_#00000080] lg:absolute lg:top-0 lg:right-[-120%] lg:translate-y-[-50%];
+  @apply lg:w-[312px] lg:rounded-[6px] lg:border-[0.5px] lg:border-opacity-20 lg:shadow-[0_2px_5px_#00000080] lg:absolute lg:top-0 lg:right-[-120%] lg:translate-y-[-50%];
 }
 
 .rewardDetailsHeader {
-  @apply flex items-center  text-white-40 text-[14px] font-light leading-[16px] p-[12px_16px] border-b border-b-white-05;
+  @apply flex items-center text-white-40 text-[14px] font-light leading-[16px] p-[12px_16px] border-b border-b-white-05;
 }
 
 .rewardDetailsBody {
@@ -76,38 +167,46 @@ body {
   @apply text-[#7d7d7d] text-[15px] font-normal leading-[1.3];
 }
 
-.narrativeBody {
-  @apply p-[24px] border-t border-[rgba(255,255,255,0.1)] flex flex-col gap-[8px] bg-[#101010] max-h-[350px] overflow-y-auto left-0 top-full absolute rounded-bl-[24px] rounded-br-[24px] w-full
+.questContainer {
+  @apply rounded-[12px] border border-white-05 bg-white-05 p-[8px] flex items-center gap-[16px] cursor-pointer transition duration-[200ms] ease-in-out;
 }
 
-.questContainer{
-  @apply rounded-[12px] border border-[rgba(255,255,255,0.05)] bg-[rgba(255,255,255,0.05)] p-[8px] flex items-center gap-[16px] cursor-pointer transition duration-[200ms] ease-in-out
+.questImage {
+  @apply flex-none h-[80px] w-[120px];
 }
 
-.questImage{
-  @apply flex-none h-[80px] w-[120px] 
+.questName {
+  @apply text-white-80 text-[20px] font-normal leading-[24px] mb-[16px] line-clamp-[1] overflow-hidden;
 }
 
-.questName{
-  @apply  text-[rgba(255,255,255,0.8)]  text-[20px] font-normal leading-[24px] mb-[16px] line-clamp-[1] overflow-hidden
+.questInfo {
+  @apply flex items-center mt-[12px] gap-[10px];
 }
 
-.questInfo{
-  @apply flex items-center mt-[12px] gap-[10px]
+.questTasks {
+  @apply text-white-60 text-[16px] font-light leading-[20px];
 }
 
-.questTasks{
-  @apply text-[rgba(255,255,255,0.6)] text-[16px] font-light leading-[20px]
+.progressBarContainer {
+  @apply relative rounded-full bg-white-01 h-[18px] p-[2px] flex-shrink-0 flex items-center max-w-[268px] w-full;
 }
 
-.progressBarContainer{
-  @apply relative rounded-full bg-[rgba(255,255,255,0.01)]  h-[18px] p-[2px] flex-shrink-0 flex items-center max-w-[268px] w-full
+.questCompleteTick {
+  @apply flex items-center justify-center w-[24px] h-[24px] p-[4px] flex-shrink-0 rounded-[1000px] border border-white-10 bg-white-05 backdrop-blur-[10px] self-end text-[#fff3];
 }
 
-.questCompleteTick{
-  @apply flex items-center justify-center w-[24px] h-[24px] p-[4px] flex-shrink-0 rounded-[1000px] border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.05)] backdrop-blur-[10px] self-end text-[#fff3]
+.videoCardContainer {
+  @apply w-[85vw] h-[60vh] sm:w-[283px] sm:h-[420px] rounded-2xl border border-white-20 bg-white-05 flex flex-col justify-between relative overflow-hidden;
 }
 
-.navbarContent{
-  @apply flex w-full max-w-screen-xl
+.videoIcon {
+  @apply flex w-[40px] h-[40px] p-[8px] justify-center items-center rounded-full border border-white-20 bg-white-40 backdrop-blur-[20px] absolute top-[16px] right-[16px] cursor-pointer;
+}
+
+.videoCardTitle {
+  @apply text-[#fff9] text-[24px] font-normal leading-[30px] tracking-[.117px] absolute bottom-[12px] left-[15px] mix-blend-plus-lighter overflow-hidden text-ellipsis line-clamp-3 z-10;
+}
+
+.videoCardImage {
+  @apply absolute bottom-[-60px] left-0 z-[1] w-full h-[100px] filter blur-[15px] object-bottom transform scale-[3];
 }

@@ -1,8 +1,9 @@
-import AllSection from "@/components/AllSection";
-import CardsContainer from "@/components/CardsContainer";
-import Footer from "@/components/Footer";
-import HeroSection from "@/components/HeroSection";
-import Navbar from "@/components/Navbar";
+import CardsContainer from "@/components/home/CardsContainer";
+import EssentialsSection from "@/components/home/EssentialsSection";
+import Footer from "@/components/home/Footer";
+import HeroSection from "@/components/home/HeroSection";
+import Intercom from "@/components/home/Intercom";
+import Navbar from "@/components/home/Navbar";
 
 export default function Home() {
   return (
@@ -10,9 +11,10 @@ export default function Home() {
       <Navbar />
       <div className="overflow-x-hidden">
         <HeroSection />
-        <AllSection />
+        <EssentialsSection />
         <CardsContainer />
         <Footer />
+        <Intercom />
       </div>
     </>
   );

@@ -12,7 +12,7 @@ const HeroSection = () => {
         alt="Background Image"
         className="object-cover object-center w-full h-[40vh] lg:h-full -z-20"
         priority
-        unoptimized
+       
       />
 
       <div className=" absolute top-[-48%] lg:top-[6%] left-[50%] transform translate-x-[-50%] -translate-y-[-50%] flex flex-col justify-center items-center mix-blend-screen z-10 ">
@@ -22,6 +22,7 @@ const HeroSection = () => {
             alt="Image"
             width={235}
             height={100}
+            unoptimized={true}
           />
         </div>
 
