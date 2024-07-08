@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-[#080808];
+}
+
+.searchContainer {
+  @apply  hidden lg:flex rounded-full border border-white-05 bg-white-07 h-[42.5px] px-4 py-[10px] items-center flex-1 gap-2 relative
+}
+
+.searchInput {
+  @apply flex-1 text-white text-sm  font-normal leading-5  border-none w-full bg-transparent tracking-wide
+}
+
+.timerNumber {
+  @apply text-white-60 text-center text-2xl font-medium leading-10 tracking-tight;
+}
+
+.timerInterval {
+  @apply text-white-20 text-center text-base font-normal leading-5 tracking-tight;
+}
+/* 
+.text-shadow {
+    @apply drop-shadow-[0px_0px_2px_rgba(0, 0, 0, 0.4)]
+} */
+
+.socialLink {
+  @apply bg-[#1a1a1a] opacity-100 rounded-lg mx-2 p-2 text-[1.25rem] cursor-pointer;
+}
+
+.footerTitle {
+  @apply mb-2 text-[15px] leading-snug font-semibold uppercase text-white;
+}
+
+.footerLinkContainer {
+  @apply text-[#7d7d7d] font-normal text-[15px] leading-snug flex flex-col gap-2 justify-start items-start;
+}
+
+.cardBody {
+  @apply w-[85vw] h-[60vh] sm:w-[283px] sm:h-[420px] rounded-2xl border border-white-20 bg-white-05 flex flex-col justify-between relative overflow-hidden;
+}
+
+/* .reelIconBox {
+  @apply flex w-10 h-10 p-2 justify-center items-center rounded-full border border-white-20 bg-[rgba(0, 0, 0, 0.4)] backdrop-blur-[20px] absolute top-4 right-4 cursor-pointer;
+} */
+
+.cardImage {
+  @apply absolute bottom-[-60px] left-0 z-[1] w-full h-[100px] filter blur-[15px] object-bottom transform scale-[3];
+}
+
+.cardTitle {
+  @apply text-[#fff9]  text-[24px] font-normal leading-[30px] tracking-[.117px] absolute bottom-[12px] left-[15px] mix-blend-plus-lighter overflow-hidden text-ellipsis line-clamp-3 z-[2];
+}
+
+.rewardPath {
+  @apply hidden lg:block absolute top-[43%] right-[-75%] z-[-1] translate-y-[-50%] opacity-50;
+}
+
+.rewardDetailContainer {
+  @apply w-full mt-5 relative transform-none top-0 right-0 rounded border border-opacity-20 border-white bg-[#131313];
+
+  @apply lg:w-[312px] lg:rounded-[6px] lg:border-[0.5px]  lg:border-opacity-20  lg:shadow-[0_2px_5px_#00000080] lg:absolute lg:top-0 lg:right-[-120%] lg:translate-y-[-50%];
+}
+
+.rewardDetailsHeader {
+  @apply flex items-center  text-white-40 text-[14px] font-light leading-[16px] p-[12px_16px] border-b border-b-white-05;
+}
+
+.rewardDetailsBody {
+  @apply text-white-60 text-[16px] font-normal leading-[20px] p-4;
+}
+
+.rewardDetailPara {
+  @apply text-[#7d7d7d] text-[15px] font-normal leading-[1.3];
+}
+
+.narrativeBody {
+  @apply p-[24px] border-t border-[rgba(255,255,255,0.1)] flex flex-col gap-[8px] bg-[#101010] max-h-[350px] overflow-y-auto left-0 top-full absolute rounded-bl-[24px] rounded-br-[24px] w-full
+}
+
+.questContainer{
+  @apply rounded-[12px] border border-[rgba(255,255,255,0.05)] bg-[rgba(255,255,255,0.05)] p-[8px] flex items-center gap-[16px] cursor-pointer transition duration-[200ms] ease-in-out
+}
+
+.questImage{
+  @apply flex-none h-[80px] w-[120px] 
+}
+
+.questName{
+  @apply  text-[rgba(255,255,255,0.8)]  text-[20px] font-normal leading-[24px] mb-[16px] line-clamp-[1] overflow-hidden
+}
+
+.questInfo{
+  @apply flex items-center mt-[12px] gap-[10px]
+}
+
+.questTasks{
+  @apply text-[rgba(255,255,255,0.6)] text-[16px] font-light leading-[20px]
+}
+
+.progressBarContainer{
+  @apply relative rounded-full bg-[rgba(255,255,255,0.01)]  h-[18px] p-[2px] flex-shrink-0 flex items-center max-w-[268px] w-full
+}
+
+.questCompleteTick{
+  @apply flex items-center justify-center w-[24px] h-[24px] p-[4px] flex-shrink-0 rounded-[1000px] border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.05)] backdrop-blur-[10px] self-end text-[#fff3]
+}
+
+.navbarContent{
+  @apply flex w-full max-w-screen-xl
+}
